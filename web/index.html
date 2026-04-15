@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaizLocal | Feira Digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <p class="badge">Comunidade que fortalece o bairro</p>
+    <h1>RaizLocal</h1>
+    <p class="subtitle">Uma vitrine digital para feirantes anunciarem seus produtos com praticidade.</p>
+    <a class="btn" href="#cadastrar">Quero anunciar agora</a>
+  </div>
+</header>
+
+<main class="container grid">
+  <section class="panel" id="cadastrar">
+    <h2>Cadastrar novo produto</h2>
+    <form id="produto-form">
+      <div class="row">
+        <label>Nome do produto
+          <input name="nome" placeholder="Ex: Banana Prata" required>
+        </label>
+        <label>Preço
+          <input name="preco" placeholder="Ex: R$ 6,00/kg" required>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Categoria
+          <input name="categoria" placeholder="Ex: Frutas" required>
+        </label>
+        <label>Feirante / Banca
+          <input name="feirante" placeholder="Ex: Banca do João" required>
+        </label>
+      </div>
+
+      <label>Descrição
+        <textarea name="descricao" placeholder="Conte os diferenciais do seu produto" required></textarea>
+      </label>
+
+      <label>Contato
+        <input name="contato" placeholder="WhatsApp, telefone ou Instagram" required>
+      </label>
+
+      <button type="submit">Publicar produto</button>
+      <p class="status" id="status"></p>
+    </form>
+  </section>
+
+  <section class="panel" id="vitrine">
+    <div class="vitrine-header">
+      <h2>Vitrine da Feira</h2>
+      <input id="filtro-categoria" placeholder="Filtrar por categoria...">
+    </div>
+    <div id="lista-produtos" class="cards"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Projeto aberto para novas atualizações: logística, pagamentos e ranking de feiras podem ser adicionados na próxima fase.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
